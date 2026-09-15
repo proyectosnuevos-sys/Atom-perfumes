@@ -3,13 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>ATOM | Perfumes que hacen historias</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
 --red:#d30b0b;
 --wine:#410510;
@@ -20,9 +23,13 @@
 --line:#e6cac8
 }
 
-*{box-sizing:border-box}
+*{
+box-sizing:border-box
+}
 
-html{scroll-behavior:smooth}
+html{
+scroll-behavior:smooth
+}
 
 body{
 margin:0;
@@ -31,9 +38,18 @@ color:var(--ink);
 font-family:Manrope,sans-serif
 }
 
-a{text-decoration:none;color:inherit}
+a{
+text-decoration:none;
+color:inherit
+}
 
-button{font-family:inherit}
+button{
+font-family:inherit
+}
+
+/* =========================
+   BARRA SUPERIOR
+========================= */
 
 .notice{
 padding:10px;
@@ -44,6 +60,10 @@ font:10px 'DM Mono';
 letter-spacing:.13em;
 text-transform:uppercase
 }
+
+/* =========================
+   NAV
+========================= */
 
 .nav{
 height:82px;
@@ -57,7 +77,8 @@ position:relative;
 z-index:10
 }
 
-.links,.tools{
+.links,
+.tools{
 display:flex;
 gap:24px;
 align-items:center;
@@ -76,6 +97,10 @@ font-size:32px
 .tools a{
 cursor:pointer
 }
+
+/* =========================
+   CARRITO NAV
+========================= */
 
 .cart-button{
 border:0;
@@ -102,6 +127,10 @@ justify-content:center;
 font:9px 'DM Mono'
 }
 
+/* =========================
+   HERO
+========================= */
+
 .hero{
 min-height:680px;
 display:flex;
@@ -118,7 +147,8 @@ padding:8vw;
 max-width:710px
 }
 
-.tag,.label{
+.tag,
+.label{
 font:10px 'DM Mono';
 letter-spacing:.15em;
 text-transform:uppercase
@@ -169,6 +199,10 @@ background:#fff;
 color:#090505
 }
 
+/* =========================
+   PERSONAJE ATOM
+========================= */
+
 .atom-seal{
 position:absolute;
 right:6vw;
@@ -199,6 +233,10 @@ text-transform:uppercase;
 letter-spacing:.08em
 }
 
+/* =========================
+   TICKER
+========================= */
+
 .ticker{
 padding:16px;
 overflow:hidden;
@@ -210,6 +248,10 @@ letter-spacing:.12em;
 text-transform:uppercase
 }
 
+/* =========================
+   INTRO
+========================= */
+
 .intro{
 display:grid;
 grid-template-columns:1fr 1.3fr;
@@ -217,7 +259,9 @@ gap:80px;
 padding:110px 7vw
 }
 
-.label{color:var(--red)}
+.label{
+color:var(--red)
+}
 
 h2{
 font:500 clamp(42px,5vw,70px)/1 'Playfair Display';
@@ -230,6 +274,10 @@ max-width:500px;
 line-height:1.75;
 color:#735559
 }
+
+/* =========================
+   COLECCIÓN
+========================= */
 
 .shop{
 padding:82px 7vw 105px;
@@ -320,6 +368,10 @@ background:var(--red)
 background:var(--red)
 }
 
+/* =========================
+   BENEFICIOS
+========================= */
+
 .benefits{
 background:#d30b0b;
 color:white;
@@ -346,6 +398,10 @@ color:#f5d8d8;
 font-size:13px;
 line-height:1.6
 }
+
+/* =========================
+   SUSCRIPCIÓN
+========================= */
 
 .subscribe{
 text-align:center;
@@ -383,6 +439,10 @@ text-transform:uppercase;
 cursor:pointer
 }
 
+/* =========================
+   FOOTER
+========================= */
+
 .footer{
 padding:28px 6vw;
 background:var(--wine);
@@ -394,7 +454,10 @@ letter-spacing:.08em;
 text-transform:uppercase
 }
 
-/* DRAWER */
+/* =========================
+   DRAWER
+========================= */
+
 .drawer{
 position:fixed;
 z-index:100;
@@ -438,7 +501,10 @@ color:#735559;
 line-height:1.7
 }
 
-/* CARRITO */
+/* =========================
+   CARRITO
+========================= */
+
 .cart-items{
 margin-top:25px
 }
@@ -521,31 +587,38 @@ color:var(--ink);
 margin-bottom:10px
 }
 
-.cart-message{
-margin-top:15px;
-padding:13px;
-background:#f2d7cf;
-font:10px/1.6 'DM Mono';
-text-transform:uppercase;
-display:none
-}
+/* =========================
+   BUSCADOR
+========================= */
 
 .search{
 width:100%;
+border:0;
 border-bottom:1px solid var(--red);
-padding:14px 0
+background:none;
+outline:0;
+padding:14px 0;
+font:14px Manrope
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media(max-width:1100px){
+
 .products{
 grid-template-columns:repeat(3,1fr)
 }
+
 }
 
 @media(max-width:900px){
+
 .products{
 grid-template-columns:repeat(2,1fr)
 }
+
 }
 
 @media(max-width:720px){
@@ -627,94 +700,200 @@ flex-direction:column
 .panel{
 padding:55px 24px 25px
 }
+
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     BARRA SUPERIOR
+========================= -->
+
 <div class="notice">
 Autenticidad garantizada · Perfumes que hacen historias
 </div>
 
+
+<!-- =========================
+     NAVEGACIÓN
+========================= -->
+
 <nav class="nav">
 
 <div class="links">
-<a href="#coleccion">Colección</a>
-<a href="#casa">La casa</a>
+
+<a href="#coleccion">
+Colección
+</a>
+
+<a href="#casa">
+La casa
+</a>
+
 </div>
 
-<a class="logo" href="#">ATOM</a>
+
+<a class="logo" href="#">
+ATOM
+</a>
+
 
 <div class="tools">
-<a href="#buscar" id="searchBtn">Buscar</a>
+
+<a href="#buscar" id="searchBtn">
+Buscar
+</a>
+
 
 <button class="cart-button" id="cartBtn">
+
 Carrito
-<span class="cart-count" id="cartCount">0</span>
+
+<span class="cart-count" id="cartCount">
+0
+</span>
+
 </button>
 
-<a href="https://wa.me/573184473501" target="_blank">WhatsApp</a>
+
+<a
+href="https://wa.me/573184473501"
+target="_blank">
+
+WhatsApp
+
+</a>
+
 </div>
 
 </nav>
 
+
 <main>
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
 <div>
-<p class="tag">ATOM PARFUMS · Más que un perfume</p>
 
-<h1>
-Perfumes que hacen <em>historias.</em>
-</h1>
-
-<p>
-Fragancias originales para esos momentos que merecen convertirse en memoria.
+<p class="tag">
+ATOM PARFUMS · Más que un perfume
 </p>
 
-<a href="#coleccion" class="button">
+
+<h1>
+
+Perfumes que hacen
+<em>historias.</em>
+
+</h1>
+
+
+<p>
+
+Fragancias originales para esos momentos que merecen convertirse en memoria.
+
+</p>
+
+
+<a
+href="#coleccion"
+class="button">
+
 Explorar colección
+
 </a>
+
 </div>
 
+
 <div class="atom-seal">
-<img src="assets/atom-brand-character.png" alt="Atom, personaje de la marca">
-<span>El sello<br>ATOM</span>
+
+<img
+src="assets/atom-brand-character.png"
+alt="Atom, personaje de la marca">
+
+<span>
+El sello<br>
+ATOM
+</span>
+
 </div>
 
 </section>
 
+
+<!-- =========================
+     TICKER
+========================= -->
+
 <div class="ticker">
+
 Perfumes originales ✦ Asesoría experta ✦ Empaque de regalo ✦ Perfumes originales ✦ Asesoría experta ✦ Empaque de regalo ✦
+
 </div>
 
-<section class="intro" id="casa">
+
+<!-- =========================
+     CASA ATOM
+========================= -->
+
+<section
+class="intro"
+id="casa">
 
 <span class="label">
+
 La casa ATOM — 01
+
 </span>
+
 
 <div>
 
 <h2>
-El lujo se <em>percibe.</em>
+
+El lujo se
+<em>percibe.</em>
+
 </h2>
 
+
 <p>
+
 Seleccionamos esencias con carácter, permanencia y una historia para contar. Menos opciones, mejores elecciones.
+
 </p>
 
-<a href="#coleccion" class="button">
+
+<a
+href="#coleccion"
+class="button">
+
 Conocer fragancias
+
 </a>
 
 </div>
 
 </section>
 
-<section class="shop" id="coleccion">
+
+<!-- =========================
+     COLECCIÓN
+========================= -->
+
+<section
+class="shop"
+id="coleccion">
+
 
 <div class="head">
 
@@ -723,33 +902,71 @@ La colección
 </h2>
 
 <span>
-20 fragancias seleccionadas
+24 fragancias seleccionadas
 </span>
 
 </div>
 
-<div class="products" id="products"></div>
+
+<div
+class="products"
+id="products">
+
+</div>
 
 </section>
+
+
+<!-- =========================
+     BENEFICIOS
+========================= -->
 
 <section class="benefits">
 
 <div>
-<strong>Originales</strong>
-<p>Autenticidad verificada en cada frasco.</p>
+
+<strong>
+Originales
+</strong>
+
+<p>
+Autenticidad verificada en cada frasco.
+</p>
+
 </div>
 
-<div>
-<strong>Selección</strong>
-<p>Una colección íntima y especial.</p>
-</div>
 
 <div>
-<strong>Entrega cuidada</strong>
-<p>Empaque protector y presentación de regalo.</p>
+
+<strong>
+Selección
+</strong>
+
+<p>
+Una colección íntima y especial.
+</p>
+
+</div>
+
+
+<div>
+
+<strong>
+Entrega cuidada
+</strong>
+
+<p>
+Empaque protector y presentación de regalo.
+</p>
+
 </div>
 
 </section>
+
+
+<!-- =========================
+     SUSCRIPCIÓN
+========================= -->
 
 <section class="subscribe">
 
@@ -760,6 +977,7 @@ Esencias que llegan primero.
 <p>
 Lanzamientos y pequeñas obsesiones olfativas, directamente a tu correo.
 </p>
+
 
 <form class="email">
 
@@ -776,7 +994,13 @@ Unirme →
 
 </section>
 
+
 </main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer class="footer">
 
@@ -790,20 +1014,84 @@ Instagram · WhatsApp · Términos
 
 </footer>
 
-<!-- DRAWER -->
-<aside class="drawer" id="drawer" hidden>
 
-<div class="panel" id="panel"></div>
+<!-- =========================
+     DRAWER
+========================= -->
+
+<aside
+class="drawer"
+id="drawer"
+hidden>
+
+<div
+class="panel"
+id="panel">
+
+</div>
 
 </aside>
+
 
 <script>
 
 /* =====================================================
-   PRODUCTOS ATOM
+   CATÁLOGO ATOM
+
+   PARA AGREGAR UN PRODUCTO EN EL FUTURO:
+
+   [
+     "nombre-del-archivo.jpeg",
+     "Nombre del perfume",
+     "Marca · Tipo de perfume"
+   ]
+
+   Si la imagen está en assets/productos,
+   solo escribe el nombre del archivo.
+
 ===================================================== */
 
+
 const products = [
+
+
+/* =====================================================
+   PRODUCTOS ANTERIORES
+===================================================== */
+
+[
+"assets/blackoud-by-drew.jpeg",
+"Blackoud by Drew",
+"Extrait de parfum · 50 ml"
+],
+
+
+[
+"assets/odyssey-mandarinsky-elixir.jpeg",
+"Mandarinsky Elixir",
+"Odyssey · Limited Edition"
+],
+
+
+[
+"assets/his-confession-lattafa.jpeg",
+"His Confession",
+"Lattafa · Eau de parfum"
+],
+
+
+[
+"assets/WhatsApp%20Image%202026-09-15%20at%2012.01.17%20AM.jpeg",
+"Afnan 9 PM",
+"Afnan · Eau de parfum"
+],
+
+
+
+/* =====================================================
+   PRODUCTOS NUEVOS
+===================================================== */
+
 
 [
 "WhatsApp Image 2026-09-15 at 3.05.43 PM (1).jpeg",
@@ -811,11 +1099,13 @@ const products = [
 "Lattafa · Eau de parfum"
 ],
 
+
 [
 "WhatsApp Image 2026-09-15 at 3.05.43 PM (2).jpeg",
 "Stronger With You Intensely",
 "Emporio Armani · Eau de parfum"
 ],
+
 
 [
 "WhatsApp Image 2026-09-15 at 3.05.43 PM (3).jpeg",
@@ -823,11 +1113,13 @@ const products = [
 "Azzaro · Eau de toilette"
 ],
 
+
 [
 "WhatsApp Image 2026-09-15 at 3.05.43 PM.jpeg",
 "Montblanc Legend Spirit",
 "Montblanc · Eau de toilette"
 ],
+
 
 [
 "WhatsApp Image 2026-09-15 at 3.05.44 PM (1).jpeg",
@@ -835,11 +1127,13 @@ const products = [
 "Lattafa · Eau de parfum"
 ],
 
+
 [
 "WhatsApp Image 2026-09-15 at 3.05.44 PM.jpeg",
 "Nitro Red",
 "Nitro · Eau de parfum"
 ],
+
 
 [
 "WhatsApp Image 2026-09-15 at 3.34.43 PM.jpeg",
@@ -847,11 +1141,13 @@ const products = [
 "Eau de parfum · 100 ml"
 ],
 
+
 [
 "WhatsApp Image 2026-09-15 at 3.35.04 PM.jpeg",
 "Blue Stallion",
 "Eau de parfum · 100 ml"
 ],
+
 
 [
 "WhatsApp Image 2026-09-15 at 3.45.36 PM (1).jpeg",
@@ -859,11 +1155,13 @@ const products = [
 "Rabanne · Phantom"
 ],
 
+
 [
 "WhatsApp Image 2026-09-15 at 3.45.36 PM.jpeg",
 "Phantom",
 "Rabanne · Eau de toilette"
 ],
+
 
 [
 "WhatsApp Image 2026-09-15 at 3.54.32 PM (1).jpeg",
@@ -871,11 +1169,13 @@ const products = [
 "Rabanne · Parfum"
 ],
 
+
 [
 "WhatsApp Image 2026-09-15 at 3.54.32 PM.jpeg",
 "Phantom",
 "Rabanne · Eau de parfum"
 ],
+
 
 [
 "WhatsApp Image 2026-09-15 at 4.07.18 PM (1).jpeg",
@@ -883,11 +1183,13 @@ const products = [
 "French Avenue · Eau de parfum"
 ],
 
+
 [
 "WhatsApp Image 2026-09-15 at 4.07.18 PM.jpeg",
 "Liquid Brun",
 "Eau de parfum"
 ],
+
 
 [
 "WhatsApp Image 2026-09-15 at 4.07.19 PM.jpeg",
@@ -895,11 +1197,13 @@ const products = [
 "French Avenue · Eau de parfum"
 ],
 
+
 [
 "WhatsApp Image 2026-09-15 at 4.16.58 PM.jpeg",
 "Blackoud Dubai Night",
 "Blackoud · Extrait de parfum"
 ],
+
 
 [
 "WhatsApp Image 2026-09-15 at 4.16.59 PM.jpeg",
@@ -907,17 +1211,20 @@ const products = [
 "Moschino · Eau de parfum"
 ],
 
+
 [
 "WhatsApp Image 2026-09-15 at 4.17.22 PM.jpeg",
 "Blackoud Oriental Elixir",
 "Blackoud · Extrait de parfum"
 ],
 
+
 [
 "WhatsApp Image 2026-09-15 at 4.24.11 PM (1).jpeg",
 "Toy Boy Pearl",
 "Moschino · Eau de parfum"
 ],
+
 
 [
 "WhatsApp Image 2026-09-15 at 4.24.20 PM (1).jpeg",
@@ -936,48 +1243,111 @@ let cart = [];
 
 
 /* Número de WhatsApp ATOM */
-const whatsappNumber = "573184473501";
+
+const whatsappNumber =
+"573184473501";
+
+
+/* =====================================================
+   ELEMENTOS
+===================================================== */
+
+const productsContainer =
+document.querySelector("#products");
+
+const cartCount =
+document.querySelector("#cartCount");
+
+const cartBtn =
+document.querySelector("#cartBtn");
+
+const drawer =
+document.querySelector("#drawer");
+
+const panel =
+document.querySelector("#panel");
 
 
 /* =====================================================
    MOSTRAR PRODUCTOS
 ===================================================== */
 
-const productsContainer = document.querySelector("#products");
-
 products.forEach((product,index)=>{
 
-const [image,name,type] = product;
+const image = product[0];
 
-const article = document.createElement("article");
+const name = product[1];
 
-article.className = "product";
+const type = product[2];
+
+
+const article =
+document.createElement("article");
+
+article.className =
+"product";
+
+
+/*
+   Las imágenes antiguas ya tienen
+   la carpeta assets incluida.
+
+   Las nuevas están dentro de
+   assets/productos.
+*/
+
+let imagePath;
+
+
+if(image.startsWith("assets/")){
+
+imagePath = image;
+
+}else{
+
+imagePath =
+"assets/productos/" +
+encodeURIComponent(image);
+
+}
+
 
 article.innerHTML = `
 
 <div class="visual">
 
 <img
-src="assets/productos/${encodeURIComponent(image)}"
+src="${imagePath}"
 alt="${name}"
 loading="lazy">
 
 </div>
 
+
 <div class="info">
 
-<h3>${name}</h3>
+<h3>
+${name}
+</h3>
 
-<p>${type}</p>
+<p>
+${type}
+</p>
+
 
 <div class="row">
 
-<span>Disponible</span>
+<span>
+Disponible
+</span>
+
 
 <button
 class="add"
 data-index="${index}">
+
 Añadir
+
 </button>
 
 </div>
@@ -986,40 +1356,68 @@ Añadir
 
 `;
 
+
 productsContainer.appendChild(article);
 
 });
 
 
 /* =====================================================
-   AÑADIR PRODUCTO
+   BOTONES AÑADIR
 ===================================================== */
 
-document.querySelectorAll(".add").forEach(button=>{
+document
+.querySelectorAll(".add")
+.forEach(button=>{
+
 
 button.addEventListener("click",()=>{
 
-const index = Number(button.dataset.index);
 
-const product = products[index];
+const index =
+Number(button.dataset.index);
 
-const alreadyExists = cart.find(item=>item.name === product[1]);
 
-if(!alreadyExists){
+const product =
+products[index];
+
+
+const name =
+product[1];
+
+
+/*
+   Evitamos duplicados.
+*/
+
+const exists =
+cart.some(
+item => item.name === name
+);
+
+
+if(!exists){
 
 cart.push({
+
 name:product[1],
+
 type:product[2]
+
 });
 
-button.textContent = "Añadido ✓";
+}
+
+
+/*
+   Cambiar botón
+*/
+
+button.textContent =
+"Añadido ✓";
+
 button.classList.add("added");
 
-}else{
-
-button.textContent = "Añadido ✓";
-
-}
 
 updateCart();
 
@@ -1034,7 +1432,8 @@ updateCart();
 
 function updateCart(){
 
-document.querySelector("#cartCount").textContent = cart.length;
+cartCount.textContent =
+cart.length;
 
 }
 
@@ -1043,22 +1442,27 @@ document.querySelector("#cartCount").textContent = cart.length;
    ABRIR CARRITO
 ===================================================== */
 
-const drawer = document.querySelector("#drawer");
-
-const panel = document.querySelector("#panel");
-
-const cartBtn = document.querySelector("#cartBtn");
-
-
-cartBtn.addEventListener("click",()=>{
-
-openCart();
-
-});
+cartBtn.addEventListener(
+"click",
+openCart
+);
 
 
 /* =====================================================
-   CERRAR DRAWER
+   ABRIR
+===================================================== */
+
+function openCart(){
+
+renderCart();
+
+drawer.hidden = false;
+
+}
+
+
+/* =====================================================
+   CERRAR
 ===================================================== */
 
 function closeDrawer(){
@@ -1072,40 +1476,38 @@ drawer.hidden = true;
    MOSTRAR CARRITO
 ===================================================== */
 
-function openCart(){
-
-renderCart();
-
-drawer.hidden = false;
-
-}
-
-
-/* =====================================================
-   RENDERIZAR CARRITO
-===================================================== */
-
 function renderCart(){
+
 
 if(cart.length === 0){
 
 panel.innerHTML = `
 
-<button class="close" id="closeCart">×</button>
+<button
+class="close"
+id="closeCart">
+
+×
+
+</button>
+
 
 <span class="label">
 ATOM PARFUMS
 </span>
 
+
 <h2>
 Tu carrito
 </h2>
+
 
 <div class="empty-cart">
 
 <strong>
 Tu carrito está vacío.
 </strong>
+
 
 <p>
 Añade los perfumes que te interesen y aquí podrás revisar tu selección antes de pedir por WhatsApp.
@@ -1115,15 +1517,20 @@ Añade los perfumes que te interesen y aquí podrás revisar tu selección antes
 
 `;
 
+
 }else{
+
 
 let itemsHTML = "";
 
+
 cart.forEach((item,index)=>{
+
 
 itemsHTML += `
 
 <div class="cart-item">
+
 
 <div>
 
@@ -1131,17 +1538,22 @@ itemsHTML += `
 ${item.name}
 </div>
 
+
 <div class="cart-item-type">
 ${item.type}
 </div>
 
 </div>
 
+
 <button
 class="remove-item"
 data-index="${index}">
+
 Eliminar
+
 </button>
+
 
 </div>
 
@@ -1152,42 +1564,61 @@ Eliminar
 
 panel.innerHTML = `
 
-<button class="close" id="closeCart">×</button>
+<button
+class="close"
+id="closeCart">
+
+×
+
+</button>
+
 
 <span class="label">
 ATOM PARFUMS
 </span>
 
+
 <h2>
 Tu pedido
 </h2>
 
+
 <p class="note">
-Has seleccionado ${cart.length} ${cart.length === 1 ? "perfume" : "perfumes"}.
+
+Has seleccionado
+${cart.length}
+${cart.length === 1 ? "perfume" : "perfumes"}.
+
 </p>
 
+
 <div class="cart-items">
+
 ${itemsHTML}
+
 </div>
 
+
 <div class="cart-actions">
+
 
 <button
 class="whatsapp-order"
 id="whatsappOrder">
+
 Pedir por WhatsApp
+
 </button>
+
 
 <button
 class="clear-cart"
 id="clearCart">
+
 Vaciar carrito
+
 </button>
 
-<div
-class="cart-message"
-id="cartMessage">
-</div>
 
 </div>
 
@@ -1196,19 +1627,34 @@ id="cartMessage">
 }
 
 
-/* Cerrar */
-document.querySelector("#closeCart").onclick = closeDrawer;
+/* =====================================================
+   CERRAR CARRITO
+===================================================== */
+
+document
+.querySelector("#closeCart")
+.onclick =
+closeDrawer;
 
 
-/* Eliminar productos */
+/* =====================================================
+   ELIMINAR
+===================================================== */
 
-document.querySelectorAll(".remove-item").forEach(button=>{
+document
+.querySelectorAll(".remove-item")
+.forEach(button=>{
+
 
 button.onclick = ()=>{
 
-const index = Number(button.dataset.index);
+
+const index =
+Number(button.dataset.index);
+
 
 cart.splice(index,1);
+
 
 updateCart();
 
@@ -1221,15 +1667,21 @@ renderCart();
 });
 
 
-/* Vaciar carrito */
+/* =====================================================
+   VACIAR
+===================================================== */
 
-const clearButton = document.querySelector("#clearCart");
+const clearButton =
+document.querySelector("#clearCart");
+
 
 if(clearButton){
 
 clearButton.onclick = ()=>{
 
+
 cart = [];
+
 
 updateCart();
 
@@ -1242,13 +1694,18 @@ renderCart();
 }
 
 
-/* WhatsApp */
+/* =====================================================
+   WHATSAPP
+===================================================== */
 
-const whatsappButton = document.querySelector("#whatsappOrder");
+const whatsappButton =
+document.querySelector("#whatsappOrder");
+
 
 if(whatsappButton){
 
-whatsappButton.onclick = sendOrderToWhatsApp;
+whatsappButton.onclick =
+sendOrderToWhatsApp;
 
 }
 
@@ -1256,10 +1713,11 @@ whatsappButton.onclick = sendOrderToWhatsApp;
 
 
 /* =====================================================
-   ENVIAR PEDIDO A WHATSAPP
+   CREAR PEDIDO WHATSAPP
 ===================================================== */
 
 function sendOrderToWhatsApp(){
+
 
 if(cart.length === 0){
 
@@ -1268,14 +1726,21 @@ return;
 }
 
 
-/* Crear lista */
+/*
+   Crear lista de perfumes
+*/
 
-const perfumeList = cart
-.map(item => `• ${item.name}`)
+const perfumeList =
+cart
+.map(
+item => `• ${item.name}`
+)
 .join("\n");
 
 
-/* Mensaje */
+/*
+   Mensaje final
+*/
 
 const message =
 `Hola ATOM, quiero pedir los siguientes perfumes:
@@ -1285,18 +1750,25 @@ ${perfumeList}
 ¿Me ayudan con disponibilidad y precio?`;
 
 
-/* Codificar mensaje */
+/*
+   Codificar
+*/
 
-const encodedMessage = encodeURIComponent(message);
+const encodedMessage =
+encodeURIComponent(message);
 
 
-/* Crear URL */
+/*
+   URL WhatsApp
+*/
 
 const whatsappURL =
 `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
 
-/* Abrir WhatsApp */
+/*
+   Abrir WhatsApp
+*/
 
 window.open(
 whatsappURL,
@@ -1312,22 +1784,34 @@ whatsappURL,
 
 function resetProductButtons(){
 
-document.querySelectorAll(".add").forEach((button,index)=>{
 
-const productName = products[index][1];
+document
+.querySelectorAll(".add")
+.forEach((button,index)=>{
 
-const exists = cart.some(
+
+const productName =
+products[index][1];
+
+
+const exists =
+cart.some(
 item => item.name === productName
 );
 
+
 if(exists){
 
-button.textContent = "Añadido ✓";
+button.textContent =
+"Añadido ✓";
+
 button.classList.add("added");
 
 }else{
 
-button.textContent = "Añadir";
+button.textContent =
+"Añadir";
+
 button.classList.remove("added");
 
 }
@@ -1338,7 +1822,7 @@ button.classList.remove("added");
 
 
 /* =====================================================
-   CERRAR AL TOCAR FUERA
+   CERRAR TOCANDO AFUERA
 ===================================================== */
 
 drawer.onclick = e=>{
@@ -1362,21 +1846,30 @@ document.querySelector("#searchBtn");
 
 searchBtn.onclick = e=>{
 
+
 e.preventDefault();
+
 
 panel.innerHTML = `
 
-<button class="close" id="closeSearch">
+<button
+class="close"
+id="closeSearch">
+
 ×
+
 </button>
+
 
 <span class="label">
 Encuentra tu aroma
 </span>
 
+
 <h2>
 Buscar
 </h2>
+
 
 <input
 class="search"
@@ -1384,36 +1877,54 @@ id="searchInput"
 autofocus
 placeholder="Ej. floral, cuero, vainilla">
 
+
 <p class="note">
+
 Busca por nombre de perfume o una sensación.
+
 </p>
+
 
 <div id="searchResults"></div>
 
 `;
 
+
 drawer.hidden = false;
 
 
-/* Cerrar */
+/*
+   Cerrar
+*/
 
-document.querySelector("#closeSearch").onclick =
+document
+.querySelector("#closeSearch")
+.onclick =
 closeDrawer;
 
 
-/* Buscar */
+/*
+   Buscar
+*/
 
 const input =
 document.querySelector("#searchInput");
+
 
 const results =
 document.querySelector("#searchResults");
 
 
-input.addEventListener("input",()=>{
+input.addEventListener(
+"input",
+()=>{
+
 
 const query =
-input.value.toLowerCase().trim();
+input.value
+.toLowerCase()
+.trim();
+
 
 if(!query){
 
@@ -1424,11 +1935,28 @@ return;
 }
 
 
+/*
+   Filtrar
+*/
+
 const matches =
-products.filter(product=>
-product[1].toLowerCase().includes(query) ||
-product[2].toLowerCase().includes(query)
+products.filter(product=>{
+
+return (
+
+product[1]
+.toLowerCase()
+.includes(query)
+
+||
+
+product[2]
+.toLowerCase()
+.includes(query)
+
 );
+
+});
 
 
 if(matches.length === 0){
@@ -1436,7 +1964,9 @@ if(matches.length === 0){
 results.innerHTML = `
 
 <p class="note">
+
 No encontramos ese perfume en la colección.
+
 </p>
 
 `;
@@ -1446,8 +1976,13 @@ return;
 }
 
 
+/*
+   Mostrar resultados
+*/
+
 results.innerHTML =
-matches.map(product=>`
+matches
+.map(product=>`
 
 <div
 style="
@@ -1459,20 +1994,26 @@ border-bottom:1px solid var(--line);
 style="
 font:500 22px 'Playfair Display';
 ">
+
 ${product[1]}
+
 </strong>
+
 
 <p
 style="
 font-size:11px;
 color:#79595b;
 ">
+
 ${product[2]}
+
 </p>
 
 </div>
 
-`).join("");
+`)
+.join("");
 
 });
 
@@ -1480,14 +2021,20 @@ ${product[2]}
 
 
 /* =====================================================
-   SUSCRIPCIÓN
+   FORMULARIO EMAIL
 ===================================================== */
 
-document.querySelector(".email").onsubmit = e=>{
+document
+.querySelector(".email")
+.onsubmit = e=>{
+
 
 e.preventDefault();
 
-e.currentTarget.querySelector("button").textContent =
+
+e.currentTarget
+.querySelector("button")
+.textContent =
 "¡Gracias!";
 
 };
