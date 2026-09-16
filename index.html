@@ -3,15 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>ATOM | Perfumes que hacen historias</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
---red:#a80f28;
+--red:#d30b0b;
 --wine:#410510;
 --cream:#fff8f2;
 --gold:#e8ba70;
@@ -20,9 +23,13 @@
 --line:#e6cac8
 }
 
-*{box-sizing:border-box}
+*{
+box-sizing:border-box
+}
 
-html{scroll-behavior:smooth}
+html{
+scroll-behavior:smooth
+}
 
 body{
 margin:0;
@@ -31,17 +38,32 @@ color:var(--ink);
 font-family:Manrope,sans-serif
 }
 
-a{text-decoration:none;color:inherit}
+a{
+text-decoration:none;
+color:inherit
+}
+
+button{
+font-family:inherit
+}
+
+/* =========================
+   BARRA SUPERIOR
+========================= */
 
 .notice{
 padding:10px;
 text-align:center;
-background:var(--red);
+background:#d90b0b;
 color:white;
 font:10px 'DM Mono';
 letter-spacing:.13em;
 text-transform:uppercase
 }
+
+/* =========================
+   NAV
+========================= */
 
 .nav{
 height:82px;
@@ -49,10 +71,14 @@ padding:0 6vw;
 display:flex;
 align-items:center;
 justify-content:space-between;
-border-bottom:1px solid var(--line)
+border-bottom:1px solid var(--line);
+background:var(--cream);
+position:relative;
+z-index:10
 }
 
-.links,.tools{
+.links,
+.tools{
 display:flex;
 gap:24px;
 align-items:center;
@@ -62,17 +88,48 @@ text-transform:uppercase
 }
 
 .logo{
-font:600 28px 'Playfair Display';
-letter-spacing:.2em;
-margin-left:55px
+font-family:Manrope,sans-serif;
+font-weight:800;
+letter-spacing:-.08em;
+font-size:32px
 }
 
-.tools button{
+.tools a{
+cursor:pointer
+}
+
+/* =========================
+   CARRITO NAV
+========================= */
+
+.cart-button{
 border:0;
 background:none;
 cursor:pointer;
-font:inherit
+font:10px 'DM Mono';
+letter-spacing:.08em;
+text-transform:uppercase;
+display:flex;
+align-items:center;
+gap:7px;
+padding:0
 }
+
+.cart-count{
+min-width:19px;
+height:19px;
+border-radius:50%;
+background:var(--red);
+color:white;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+font:9px 'DM Mono'
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
 min-height:680px;
@@ -80,37 +137,42 @@ display:flex;
 align-items:center;
 position:relative;
 overflow:hidden;
-color:#fff
+color:#fff;
+background:#d30b0b
 }
 
-.hero:before{
-content:'';
-position:absolute;
-inset:0;
-background:linear-gradient(90deg,rgba(50,0,9,.83),rgba(50,0,9,.08)),url('assets/hero-perfume-red.png') center/cover
-}
-
-.hero>div{
+.hero>div:first-child{
 position:relative;
 padding:8vw;
 max-width:710px
 }
 
-.tag,.label{
+.tag,
+.label{
 font:10px 'DM Mono';
 letter-spacing:.15em;
 text-transform:uppercase
 }
 
-.tag{color:var(--gold)}
+.tag{
+color:#090505;
+font-weight:800
+}
 
 h1{
-font:500 clamp(58px,7vw,105px)/.9 'Playfair Display';
-letter-spacing:-.06em;
+font-family:Manrope,sans-serif;
+font-weight:800;
+text-transform:uppercase;
+letter-spacing:-.09em;
+font-size:clamp(58px,7vw,105px);
+line-height:.9;
 margin:24px 0
 }
 
-h1 em{color:var(--gold)}
+h1 em{
+color:var(--gold);
+font-style:normal
+}
 
 .hero p:not(.tag){
 line-height:1.7;
@@ -123,8 +185,8 @@ font-size:15px
 display:inline-block;
 margin-top:20px;
 padding:15px 20px;
-background:var(--gold);
-color:var(--wine);
+background:#090505;
+color:#fff;
 border:0;
 cursor:pointer;
 font:10px 'DM Mono';
@@ -132,21 +194,63 @@ letter-spacing:.1em;
 text-transform:uppercase
 }
 
-.button:hover,.add:hover{
-filter:brightness(1.1);
-transform:translateY(-2px)
+.button:hover{
+background:#fff;
+color:#090505
 }
+
+/* =========================
+   PERSONAJE ATOM
+========================= */
+
+.atom-seal{
+position:absolute;
+right:6vw;
+bottom:0;
+width:250px;
+height:410px;
+background:#090505;
+border:4px solid #090505;
+box-shadow:13px 13px 0 #ffcf67
+}
+
+.atom-seal img{
+display:block;
+width:100%;
+height:100%;
+object-fit:contain
+}
+
+.atom-seal span{
+position:absolute;
+right:-15px;
+top:25px;
+background:#fff;
+color:#080303;
+padding:11px 13px;
+font:800 10px/1.3 Manrope,sans-serif;
+text-transform:uppercase;
+letter-spacing:.08em
+}
+
+/* =========================
+   TICKER
+========================= */
 
 .ticker{
 padding:16px;
 overflow:hidden;
 white-space:nowrap;
-background:var(--rose);
-color:var(--red);
+background:#e20d0d;
+color:#080303;
 font:500 14px 'DM Mono';
 letter-spacing:.12em;
 text-transform:uppercase
 }
+
+/* =========================
+   INTRO
+========================= */
 
 .intro{
 display:grid;
@@ -155,7 +259,9 @@ gap:80px;
 padding:110px 7vw
 }
 
-.label{color:var(--red)}
+.label{
+color:var(--red)
+}
 
 h2{
 font:500 clamp(42px,5vw,70px)/1 'Playfair Display';
@@ -168,6 +274,10 @@ max-width:500px;
 line-height:1.75;
 color:#735559
 }
+
+/* =========================
+   COLECCIÓN
+========================= */
 
 .shop{
 padding:82px 7vw 105px;
@@ -189,57 +299,36 @@ text-transform:uppercase
 
 .products{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(4,1fr);
 gap:20px
 }
 
-.product{background:var(--cream)}
+.product{
+background:var(--cream);
+transition:transform .2s ease
+}
+
+.product:hover{
+transform:translateY(-4px)
+}
 
 .visual{
 height:330px;
-display:grid;
-place-items:center;
-background:linear-gradient(135deg,#dd9d96,#790d23)
+background:#160205;
+overflow:hidden
 }
 
-.visual.b{
-background:linear-gradient(135deg,#edc0a1,#a72030)
+.visual img{
+width:100%;
+height:100%;
+display:block;
+object-fit:cover;
+object-position:center
 }
 
-.visual.c{
-background:linear-gradient(135deg,#a86069,#4b0614)
+.info{
+padding:19px
 }
-
-.bottle{
-width:106px;
-height:206px;
-border:2px solid #ffece5;
-border-radius:8px 8px 20px 20px;
-background:linear-gradient(90deg,#520615,#ee2642,#500614);
-box-shadow:18px 20px 22px #4d071855;
-position:relative
-}
-
-.bottle:before{
-content:'';
-position:absolute;
-top:-43px;
-left:15px;
-width:70px;
-height:43px;
-background:linear-gradient(90deg,#9c5a24,#f1cb80,#9c5a24);
-border-radius:5px 5px 1px 1px
-}
-
-.b .bottle{
-background:linear-gradient(90deg,#6a351b,#e8954b,#6a351b)
-}
-
-.c .bottle{
-background:linear-gradient(90deg,#25111d,#922643,#25111d)
-}
-
-.info{padding:19px}
 
 .info h3{
 font:500 25px 'Playfair Display';
@@ -255,22 +344,36 @@ color:#79595b
 display:flex;
 justify-content:space-between;
 align-items:center;
+gap:10px;
 font:10px 'DM Mono';
 letter-spacing:.04em
 }
 
 .add{
 border:0;
-background:var(--red);
+background:#090505;
 color:#fff;
-padding:10px 13px;
+padding:10px 16px;
 cursor:pointer;
 font:10px 'DM Mono';
-text-transform:uppercase
+text-transform:uppercase;
+transition:.2s
 }
 
+.add:hover{
+background:var(--red)
+}
+
+.add.added{
+background:var(--red)
+}
+
+/* =========================
+   BENEFICIOS
+========================= */
+
 .benefits{
-background:var(--red);
+background:#d30b0b;
 color:white;
 padding:68px 7vw;
 display:grid;
@@ -295,6 +398,10 @@ color:#f5d8d8;
 font-size:13px;
 line-height:1.6
 }
+
+/* =========================
+   SUSCRIPCIÓN
+========================= */
 
 .subscribe{
 text-align:center;
@@ -332,6 +439,10 @@ text-transform:uppercase;
 cursor:pointer
 }
 
+/* =========================
+   FOOTER
+========================= */
+
 .footer{
 padding:28px 6vw;
 background:var(--wine);
@@ -343,22 +454,30 @@ letter-spacing:.08em;
 text-transform:uppercase
 }
 
+/* =========================
+   DRAWER
+========================= */
+
 .drawer{
 position:fixed;
-z-index:5;
+z-index:100;
 inset:0;
 background:#23000888;
 display:flex;
 justify-content:flex-end
 }
 
-.drawer[hidden]{display:none}
+.drawer[hidden]{
+display:none
+}
 
 .panel{
-width:min(430px,100%);
+width:min(470px,100%);
+height:100%;
 background:var(--cream);
-padding:65px 38px;
-position:relative
+padding:55px 32px 30px;
+position:relative;
+overflow-y:auto
 }
 
 .panel h2{
@@ -377,126 +496,129 @@ font-size:30px;
 cursor:pointer
 }
 
-.panel ul{
-padding:0;
-list-style:none;
-border-top:1px solid var(--line)
-}
-
-.panel li{
-padding:16px 0;
-border-bottom:1px solid var(--line);
-font:500 23px 'Playfair Display'
-}
-
 .note{
 color:#735559;
 line-height:1.7
 }
 
+/* =========================
+   CARRITO
+========================= */
+
+.cart-items{
+margin-top:25px
+}
+
+.cart-item{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
+padding:17px 0;
+border-bottom:1px solid var(--line)
+}
+
+.cart-item-name{
+font:500 20px 'Playfair Display';
+line-height:1.1
+}
+
+.cart-item-type{
+font:10px 'DM Mono';
+color:#79595b;
+text-transform:uppercase;
+margin-top:6px
+}
+
+.remove-item{
+border:0;
+background:none;
+color:var(--red);
+font:10px 'DM Mono';
+text-transform:uppercase;
+cursor:pointer
+}
+
+.cart-actions{
+margin-top:30px
+}
+
+.whatsapp-order{
+display:block;
+width:100%;
+padding:17px;
+background:#090505;
+color:white;
+border:0;
+cursor:pointer;
+font:10px 'DM Mono';
+letter-spacing:.1em;
+text-transform:uppercase;
+text-align:center
+}
+
+.whatsapp-order:hover{
+background:var(--red)
+}
+
+.clear-cart{
+width:100%;
+margin-top:12px;
+padding:13px;
+background:none;
+border:1px solid var(--line);
+color:var(--red);
+cursor:pointer;
+font:10px 'DM Mono';
+letter-spacing:.08em;
+text-transform:uppercase
+}
+
+.empty-cart{
+text-align:center;
+padding:50px 10px;
+color:#79595b
+}
+
+.empty-cart strong{
+display:block;
+font:500 28px 'Playfair Display';
+color:var(--ink);
+margin-bottom:10px
+}
+
+/* =========================
+   BUSCADOR
+========================= */
+
 .search{
 width:100%;
-border-bottom:1px solid var(--red)
+border:0;
+border-bottom:1px solid var(--red);
+background:none;
+outline:0;
+padding:14px 0;
+font:14px Manrope
 }
 
-.logo{
-font-family:Manrope,sans-serif;
-font-weight:800;
-letter-spacing:-.08em;
-font-size:32px;
-margin-left:45px
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+.products{
+grid-template-columns:repeat(3,1fr)
 }
 
-.hero h1{
-font-family:Manrope,sans-serif;
-font-weight:800;
-text-transform:uppercase;
-letter-spacing:-.09em;
-max-width:650px
 }
 
-.hero{
-background:#d30b0b
+@media(max-width:900px){
+
+.products{
+grid-template-columns:repeat(2,1fr)
 }
 
-.hero:before{
-background:#d30b0b
-}
-
-.atom-seal{
-position:absolute!important;
-right:6vw;
-bottom:0;
-padding:0!important;
-width:250px!important;
-height:410px;
-display:block!important;
-background:#090505;
-border:4px solid #090505;
-box-shadow:13px 13px 0 #ffcf67
-}
-
-.atom-seal img{
-display:block;
-width:100%;
-height:100%;
-object-fit:contain;
-object-position:center;
-mix-blend-mode:normal
-}
-
-.atom-seal span{
-position:absolute;
-right:-15px;
-top:25px;
-background:#fff;
-color:#080303;
-padding:11px 13px;
-font:800 10px/1.3 Manrope,sans-serif;
-text-transform:uppercase;
-letter-spacing:.08em
-}
-
-.notice{background:#d90b0b}
-
-.button,.add{
-background:#090505;
-color:#fff
-}
-
-.button:hover,.add:hover{
-background:#fff;
-color:#090505
-}
-
-.benefits{background:#d30b0b}
-
-.ticker{
-background:#e20d0d;
-color:#080303
-}
-
-.tag{
-color:#090505;
-font-weight:800
-}
-
-.visual{
-display:block!important;
-background:#160205!important;
-overflow:hidden
-}
-
-.visual img{
-width:100%;
-height:100%;
-display:block;
-object-fit:cover;
-object-position:center
-}
-
-.visual .bottle{
-display:none
 }
 
 @media(max-width:720px){
@@ -506,19 +628,39 @@ height:68px;
 padding:0 22px
 }
 
-.links{display:none}
-
-.logo{
-margin:0;
-font-size:23px
+.links{
+display:none
 }
 
-.tools{gap:11px}
+.logo{
+font-size:27px
+}
 
-.hero{min-height:620px}
+.tools{
+gap:11px
+}
 
-.hero>div{
+.hero{
+min-height:620px
+}
+
+.hero>div:first-child{
 padding:70px 26px
+}
+
+.atom-seal{
+right:18px;
+width:128px;
+height:220px;
+box-shadow:7px 7px 0 #ffcf67
+}
+
+.atom-seal span{
+display:none
+}
+
+h1{
+font-size:54px
 }
 
 .intro{
@@ -531,7 +673,7 @@ padding:75px 26px
 padding:65px 26px
 }
 
-.products,.benefits{
+.products{
 grid-template-columns:1fr
 }
 
@@ -540,6 +682,7 @@ height:370px
 }
 
 .benefits{
+grid-template-columns:1fr;
 padding:50px 26px
 }
 
@@ -548,116 +691,209 @@ flex-direction:column;
 gap:11px
 }
 
-.atom-seal{
-right:18px;
-width:128px!important;
-height:220px;
-opacity:1;
-box-shadow:7px 7px 0 #ffcf67
+.head{
+align-items:start;
+gap:15px;
+flex-direction:column
 }
 
-.atom-seal span{
-display:none
-}
-
-.hero h1{
-font-size:54px
-}
-
-.logo{
-margin:0;
-font-size:27px
+.panel{
+padding:55px 24px 25px
 }
 
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     BARRA SUPERIOR
+========================= -->
+
 <div class="notice">
 Autenticidad garantizada · Perfumes que hacen historias
 </div>
 
+
+<!-- =========================
+     NAVEGACIÓN
+========================= -->
+
 <nav class="nav">
 
 <div class="links">
-<a href="#coleccion">Colección</a>
-<a href="#casa">La casa</a>
+
+<a href="#coleccion">
+Colección
+</a>
+
+<a href="#casa">
+La casa
+</a>
+
 </div>
 
-<a class="logo" href="#">ATOM</a>
+
+<a class="logo" href="#">
+ATOM
+</a>
+
 
 <div class="tools">
-<button id="searchBtn">Buscar</button>
-<button id="cartBtn">Bolsa (0)</button>
+
+<a href="#buscar" id="searchBtn">
+Buscar
+</a>
+
+
+<button class="cart-button" id="cartBtn">
+
+Carrito
+
+<span class="cart-count" id="cartCount">
+0
+</span>
+
+</button>
+
+
+<a
+href="https://wa.me/573184473501"
+target="_blank">
+
+WhatsApp
+
+</a>
+
 </div>
 
 </nav>
 
+
 <main>
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
 <div>
 
-<p class="tag">ATOM PARFUMS · Más que un perfume</p>
-
-<h1>
-Perfumes que hacen <em>historias.</em>
-</h1>
-
-<p>
-Fragancias originales para esos momentos que merecen convertirse en memoria.
+<p class="tag">
+ATOM PARFUMS · Más que un perfume
 </p>
 
-<a href="#coleccion" class="button">
+
+<h1>
+
+Perfumes que hacen
+<em>historias.</em>
+
+</h1>
+
+
+<p>
+
+Fragancias originales para esos momentos que merecen convertirse en memoria.
+
+</p>
+
+
+<a
+href="#coleccion"
+class="button">
+
 Explorar colección
+
 </a>
 
 </div>
 
+
 <div class="atom-seal">
 
-<img src="assets/atom-brand-character.png" alt="Atom, personaje de la marca">
+<img
+src="assets/atom-brand-character.png"
+alt="Atom, personaje de la marca">
 
 <span>
-El sello<br>ATOM
+El sello<br>
+ATOM
 </span>
 
 </div>
 
 </section>
 
+
+<!-- =========================
+     TICKER
+========================= -->
+
 <div class="ticker">
+
 Perfumes originales ✦ Asesoría experta ✦ Empaque de regalo ✦ Perfumes originales ✦ Asesoría experta ✦ Empaque de regalo ✦
+
 </div>
 
-<section class="intro" id="casa">
+
+<!-- =========================
+     CASA ATOM
+========================= -->
+
+<section
+class="intro"
+id="casa">
 
 <span class="label">
+
 La casa ATOM — 01
+
 </span>
+
 
 <div>
 
 <h2>
-El lujo se <em>percibe.</em>
+
+El lujo se
+<em>percibe.</em>
+
 </h2>
 
+
 <p>
+
 Seleccionamos esencias con carácter, permanencia y una historia para contar. Menos opciones, mejores elecciones.
+
 </p>
 
-<a href="#coleccion" class="button">
+
+<a
+href="#coleccion"
+class="button">
+
 Conocer fragancias
+
 </a>
 
 </div>
 
 </section>
 
-<section class="shop" id="coleccion">
+
+<!-- =========================
+     COLECCIÓN
+========================= -->
+
+<section
+class="shop"
+id="coleccion">
+
 
 <div class="head">
 
@@ -666,144 +902,24 @@ La colección
 </h2>
 
 <span>
-Edición seleccionada
+24 fragancias seleccionadas
 </span>
 
 </div>
 
-<div class="products">
 
-<!-- BLACKOUD BY DREW -->
-
-<article class="product">
-
-<div class="visual">
-
-<img
-src="assets/WhatsApp%20Image%202026-09-14%20at%2010.39.59%20PM%20%283%29.jpeg"
-alt="Blackoud by Drew"
->
-
-</div>
-
-<div class="info">
-
-<h3>
-Blackoud by Drew
-</h3>
-
-<p>
-Extrait de parfum · 50 ml
-</p>
-
-<div class="row">
-
-<span>
-Consultar precio
-</span>
-
-<button
-class="add"
-data-name="Blackoud by Drew"
->
-Añadir
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-
-<!-- MANDARIN SKY ELIXIR -->
-
-<article class="product">
-
-<div class="visual">
-
-<img
-src="assets/WhatsApp%20Image%202026-09-14%20at%2010.39.59%20PM%20%284%29.jpeg"
-alt="Mandarin Sky Elixir"
->
-
-</div>
-
-<div class="info">
-
-<h3>
-Mandarin Sky Elixir
-</h3>
-
-<p>
-Odyssey · Limited Edition
-</p>
-
-<div class="row">
-
-<span>
-Consultar precio
-</span>
-
-<button
-class="add"
-data-name="Mandarin Sky Elixir"
->
-Añadir
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-
-<!-- HIS CONFESSION -->
-
-<article class="product">
-
-<div class="visual">
-
-<img
-src="assets/WhatsApp%20Image%202026-09-14%20at%2010.39.59%20PM%20%285%29.jpeg"
-alt="His Confession de Lattafa"
->
-
-</div>
-
-<div class="info">
-
-<h3>
-His Confession
-</h3>
-
-<p>
-Lattafa · Eau de parfum
-</p>
-
-<div class="row">
-
-<span>
-Consultar precio
-</span>
-
-<button
-class="add"
-data-name="His Confession"
->
-Añadir
-</button>
-
-</div>
-
-</div>
-
-</article>
+<div
+class="products"
+id="products">
 
 </div>
 
 </section>
+
+
+<!-- =========================
+     BENEFICIOS
+========================= -->
 
 <section class="benefits">
 
@@ -819,6 +935,7 @@ Autenticidad verificada en cada frasco.
 
 </div>
 
+
 <div>
 
 <strong>
@@ -830,6 +947,7 @@ Una colección íntima y especial.
 </p>
 
 </div>
+
 
 <div>
 
@@ -845,6 +963,11 @@ Empaque protector y presentación de regalo.
 
 </section>
 
+
+<!-- =========================
+     SUSCRIPCIÓN
+========================= -->
+
 <section class="subscribe">
 
 <h2>
@@ -855,13 +978,13 @@ Esencias que llegan primero.
 Lanzamientos y pequeñas obsesiones olfativas, directamente a tu correo.
 </p>
 
+
 <form class="email">
 
 <input
 type="email"
 required
-placeholder="Tu correo electrónico"
->
+placeholder="Tu correo electrónico">
 
 <button>
 Unirme →
@@ -871,7 +994,13 @@ Unirme →
 
 </section>
 
+
 </main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer class="footer">
 
@@ -885,142 +1014,1028 @@ Instagram · WhatsApp · Términos
 
 </footer>
 
-<aside class="drawer" id="drawer" hidden>
 
-<div class="panel" id="panel"></div>
+<!-- =========================
+     DRAWER
+========================= -->
+
+<aside
+class="drawer"
+id="drawer"
+hidden>
+
+<div
+class="panel"
+id="panel">
+
+</div>
 
 </aside>
 
 
 <script>
 
-const drawer=document.querySelector('#drawer'),
-panel=document.querySelector('#panel'),
-cartBtn=document.querySelector('#cartBtn');
+/* =====================================================
+   CATÁLOGO ATOM
 
-let cart=[];
+   PARA AGREGAR UN PRODUCTO EN EL FUTURO:
 
-const close=()=>drawer.hidden=true;
+   [
+     "nombre-del-archivo.jpeg",
+     "Nombre del perfume",
+     "Marca · Tipo de perfume"
+   ]
 
-const cartView=()=>{
+   Si la imagen está en assets/productos,
+   solo escribe el nombre del archivo.
 
-const msg=encodeURIComponent(
-`Hola ATOM, quiero pedir los siguientes perfumes:
+===================================================== */
 
-${cart.map((x,i)=>`${i+1}. ${x}`).join('\n')}
 
-¿Me ayudan con disponibilidad y precio?`
-);
+const products = [
 
-panel.innerHTML=`
 
-<button class="close">×</button>
+/* =====================================================
+   PRODUCTOS ANTERIORES
+===================================================== */
 
-<span class="label">
-Tu selección
+[
+"assets/blackoud-by-drew.jpeg",
+"Blackoud by Drew",
+"Extrait de parfum · 50 ml"
+],
+
+
+[
+"assets/odyssey-mandarinsky-elixir.jpeg",
+"Mandarinsky Elixir",
+"Odyssey · Limited Edition"
+],
+
+
+[
+"assets/his-confession-lattafa.jpeg",
+"His Confession",
+"Lattafa · Eau de parfum"
+],
+
+
+[
+"assets/WhatsApp%20Image%202026-09-15%20at%2012.01.17%20AM.jpeg",
+"Afnan 9 PM",
+"Afnan · Eau de parfum"
+],
+
+
+
+/* =====================================================
+   PRODUCTOS NUEVOS
+===================================================== */
+
+
+[
+"WhatsApp Image 2026-09-15 at 3.05.43 PM (1).jpeg",
+"Vintage Radio",
+"Lattafa · Eau de parfum"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 3.05.43 PM (2).jpeg",
+"Stronger With You Intensely",
+"Emporio Armani · Eau de parfum"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 3.05.43 PM (3).jpeg",
+"Azzaro Wanted",
+"Azzaro · Eau de toilette"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 3.05.43 PM.jpeg",
+"Montblanc Legend Spirit",
+"Montblanc · Eau de toilette"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 3.05.44 PM (1).jpeg",
+"Asad Bourbon",
+"Lattafa · Eau de parfum"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 3.05.44 PM.jpeg",
+"Nitro Red",
+"Nitro · Eau de parfum"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 3.34.43 PM.jpeg",
+"Stallion 53",
+"Eau de parfum · 100 ml"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 3.35.04 PM.jpeg",
+"Blue Stallion",
+"Eau de parfum · 100 ml"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 3.45.36 PM (1).jpeg",
+"Phantom Red",
+"Rabanne · Phantom"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 3.45.36 PM.jpeg",
+"Phantom",
+"Rabanne · Eau de toilette"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 3.54.32 PM (1).jpeg",
+"Phantom Parfum",
+"Rabanne · Parfum"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 3.54.32 PM.jpeg",
+"Phantom",
+"Rabanne · Eau de parfum"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 4.07.18 PM (1).jpeg",
+"Veneno Bianco",
+"French Avenue · Eau de parfum"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 4.07.18 PM.jpeg",
+"Liquid Brun",
+"Eau de parfum"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 4.07.19 PM.jpeg",
+"Vulcan Feu",
+"French Avenue · Eau de parfum"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 4.16.58 PM.jpeg",
+"Blackoud Dubai Night",
+"Blackoud · Extrait de parfum"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 4.16.59 PM.jpeg",
+"Moschino Toy Boy",
+"Moschino · Eau de parfum"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 4.17.22 PM.jpeg",
+"Blackoud Oriental Elixir",
+"Blackoud · Extrait de parfum"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 4.24.11 PM (1).jpeg",
+"Toy Boy Pearl",
+"Moschino · Eau de parfum"
+],
+
+
+[
+"WhatsApp Image 2026-09-15 at 4.24.20 PM (1).jpeg",
+"Toy Boy 2",
+"Moschino · Eau de parfum"
+]
+
+];
+
+
+/* =====================================================
+   CARRITO
+===================================================== */
+
+let cart = [];
+
+
+/* Número de WhatsApp ATOM */
+
+const whatsappNumber =
+"573184473501";
+
+
+/* =====================================================
+   ELEMENTOS
+===================================================== */
+
+const productsContainer =
+document.querySelector("#products");
+
+const cartCount =
+document.querySelector("#cartCount");
+
+const cartBtn =
+document.querySelector("#cartBtn");
+
+const drawer =
+document.querySelector("#drawer");
+
+const panel =
+document.querySelector("#panel");
+
+
+/* =====================================================
+   MOSTRAR PRODUCTOS
+===================================================== */
+
+products.forEach((product,index)=>{
+
+const image = product[0];
+
+const name = product[1];
+
+const type = product[2];
+
+
+const article =
+document.createElement("article");
+
+article.className =
+"product";
+
+
+/*
+   Las imágenes antiguas ya tienen
+   la carpeta assets incluida.
+
+   Las nuevas están dentro de
+   assets/productos.
+*/
+
+let imagePath;
+
+
+if(image.startsWith("assets/")){
+
+imagePath = image;
+
+}else{
+
+imagePath =
+"assets/productos/" +
+encodeURIComponent(image);
+
+}
+
+
+article.innerHTML = `
+
+<div class="visual">
+
+<img
+src="${imagePath}"
+alt="${name}"
+loading="lazy">
+
+</div>
+
+
+<div class="info">
+
+<h3>
+${name}
+</h3>
+
+<p>
+${type}
+</p>
+
+
+<div class="row">
+
+<span>
+Disponible
 </span>
 
-<h2>
-Bolsa
-</h2>
 
-${cart.length
-?
-`<ul>
-${cart.map(x=>`<li>${x}</li>`).join('')}
-</ul>
+<button
+class="add"
+data-index="${index}">
 
-<a
-class="button"
-target="_blank"
-rel="noopener"
-href="https://wa.me/573184473501?text=${msg}"
->
-Pedir por WhatsApp
-</a>`
-:
-`<p class="note">
-Tu bolsa aún está vacía. Encuentra la esencia que te representa.
-</p>`
-}
+Añadir
+
+</button>
+
+</div>
+
+</div>
 
 `;
 
-drawer.hidden=false;
 
-panel.querySelector('.close').onclick=close;
+productsContainer.appendChild(article);
 
-};
+});
 
 
-document.querySelectorAll('.add').forEach(b=>{
+/* =====================================================
+   BOTONES AÑADIR
+===================================================== */
 
-b.onclick=()=>{
+document
+.querySelectorAll(".add")
+.forEach(button=>{
 
-cart.push(b.dataset.name);
 
-cartBtn.textContent=`Bolsa (${cart.length})`;
+button.addEventListener("click",()=>{
 
-b.textContent='Añadido ✓';
 
-setTimeout(
-()=>b.textContent='Añadir',
-1000
+const index =
+Number(button.dataset.index);
+
+
+const product =
+products[index];
+
+
+const name =
+product[1];
+
+
+/*
+   Evitamos duplicados.
+*/
+
+const exists =
+cart.some(
+item => item.name === name
 );
+
+
+if(!exists){
+
+cart.push({
+
+name:product[1],
+
+type:product[2]
+
+});
+
+}
+
+
+/*
+   Cambiar botón
+*/
+
+button.textContent =
+"Añadido ✓";
+
+button.classList.add("added");
+
+
+updateCart();
+
+});
+
+});
+
+
+/* =====================================================
+   ACTUALIZAR CONTADOR
+===================================================== */
+
+function updateCart(){
+
+cartCount.textContent =
+cart.length;
+
+}
+
+
+/* =====================================================
+   ABRIR CARRITO
+===================================================== */
+
+cartBtn.addEventListener(
+"click",
+openCart
+);
+
+
+/* =====================================================
+   ABRIR
+===================================================== */
+
+function openCart(){
+
+renderCart();
+
+drawer.hidden = false;
+
+}
+
+
+/* =====================================================
+   CERRAR
+===================================================== */
+
+function closeDrawer(){
+
+drawer.hidden = true;
+
+}
+
+
+/* =====================================================
+   MOSTRAR CARRITO
+===================================================== */
+
+function renderCart(){
+
+
+if(cart.length === 0){
+
+panel.innerHTML = `
+
+<button
+class="close"
+id="closeCart">
+
+×
+
+</button>
+
+
+<span class="label">
+ATOM PARFUMS
+</span>
+
+
+<h2>
+Tu carrito
+</h2>
+
+
+<div class="empty-cart">
+
+<strong>
+Tu carrito está vacío.
+</strong>
+
+
+<p>
+Añade los perfumes que te interesen y aquí podrás revisar tu selección antes de pedir por WhatsApp.
+</p>
+
+</div>
+
+`;
+
+
+}else{
+
+
+let itemsHTML = "";
+
+
+cart.forEach((item,index)=>{
+
+
+itemsHTML += `
+
+<div class="cart-item">
+
+
+<div>
+
+<div class="cart-item-name">
+${item.name}
+</div>
+
+
+<div class="cart-item-type">
+${item.type}
+</div>
+
+</div>
+
+
+<button
+class="remove-item"
+data-index="${index}">
+
+Eliminar
+
+</button>
+
+
+</div>
+
+`;
+
+});
+
+
+panel.innerHTML = `
+
+<button
+class="close"
+id="closeCart">
+
+×
+
+</button>
+
+
+<span class="label">
+ATOM PARFUMS
+</span>
+
+
+<h2>
+Tu pedido
+</h2>
+
+
+<p class="note">
+
+Has seleccionado
+${cart.length}
+${cart.length === 1 ? "perfume" : "perfumes"}.
+
+</p>
+
+
+<div class="cart-items">
+
+${itemsHTML}
+
+</div>
+
+
+<div class="cart-actions">
+
+
+<button
+class="whatsapp-order"
+id="whatsappOrder">
+
+Pedir por WhatsApp
+
+</button>
+
+
+<button
+class="clear-cart"
+id="clearCart">
+
+Vaciar carrito
+
+</button>
+
+
+</div>
+
+`;
+
+}
+
+
+/* =====================================================
+   CERRAR CARRITO
+===================================================== */
+
+document
+.querySelector("#closeCart")
+.onclick =
+closeDrawer;
+
+
+/* =====================================================
+   ELIMINAR
+===================================================== */
+
+document
+.querySelectorAll(".remove-item")
+.forEach(button=>{
+
+
+button.onclick = ()=>{
+
+
+const index =
+Number(button.dataset.index);
+
+
+cart.splice(index,1);
+
+
+updateCart();
+
+resetProductButtons();
+
+renderCart();
 
 };
 
 });
 
 
-cartBtn.onclick=cartView;
+/* =====================================================
+   VACIAR
+===================================================== */
+
+const clearButton =
+document.querySelector("#clearCart");
 
 
-document.querySelector('#searchBtn').onclick=()=>{
+if(clearButton){
 
-panel.innerHTML=`
+clearButton.onclick = ()=>{
 
-<button class="close">×</button>
+
+cart = [];
+
+
+updateCart();
+
+resetProductButtons();
+
+renderCart();
+
+};
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+const whatsappButton =
+document.querySelector("#whatsappOrder");
+
+
+if(whatsappButton){
+
+whatsappButton.onclick =
+sendOrderToWhatsApp;
+
+}
+
+}
+
+
+/* =====================================================
+   CREAR PEDIDO WHATSAPP
+===================================================== */
+
+function sendOrderToWhatsApp(){
+
+
+if(cart.length === 0){
+
+return;
+
+}
+
+
+/*
+   Crear lista de perfumes
+*/
+
+const perfumeList =
+cart
+.map(
+item => `• ${item.name}`
+)
+.join("\n");
+
+
+/*
+   Mensaje final
+*/
+
+const message =
+`Hola ATOM, quiero pedir los siguientes perfumes:
+
+${perfumeList}
+
+¿Me ayudan con disponibilidad y precio?`;
+
+
+/*
+   Codificar
+*/
+
+const encodedMessage =
+encodeURIComponent(message);
+
+
+/*
+   URL WhatsApp
+*/
+
+const whatsappURL =
+`https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+
+/*
+   Abrir WhatsApp
+*/
+
+window.open(
+whatsappURL,
+"_blank"
+);
+
+}
+
+
+/* =====================================================
+   RESTABLECER BOTONES
+===================================================== */
+
+function resetProductButtons(){
+
+
+document
+.querySelectorAll(".add")
+.forEach((button,index)=>{
+
+
+const productName =
+products[index][1];
+
+
+const exists =
+cart.some(
+item => item.name === productName
+);
+
+
+if(exists){
+
+button.textContent =
+"Añadido ✓";
+
+button.classList.add("added");
+
+}else{
+
+button.textContent =
+"Añadir";
+
+button.classList.remove("added");
+
+}
+
+});
+
+}
+
+
+/* =====================================================
+   CERRAR TOCANDO AFUERA
+===================================================== */
+
+drawer.onclick = e=>{
+
+if(e.target === drawer){
+
+closeDrawer();
+
+}
+
+};
+
+
+/* =====================================================
+   BUSCADOR
+===================================================== */
+
+const searchBtn =
+document.querySelector("#searchBtn");
+
+
+searchBtn.onclick = e=>{
+
+
+e.preventDefault();
+
+
+panel.innerHTML = `
+
+<button
+class="close"
+id="closeSearch">
+
+×
+
+</button>
+
 
 <span class="label">
 Encuentra tu aroma
 </span>
 
+
 <h2>
 Buscar
 </h2>
 
+
 <input
 class="search"
+id="searchInput"
 autofocus
-placeholder="Ej. floral, cuero, vainilla"
->
+placeholder="Ej. floral, cuero, vainilla">
+
 
 <p class="note">
-Busca por una nota o una sensación.
+
+Busca por nombre de perfume o una sensación.
+
+</p>
+
+
+<div id="searchResults"></div>
+
+`;
+
+
+drawer.hidden = false;
+
+
+/*
+   Cerrar
+*/
+
+document
+.querySelector("#closeSearch")
+.onclick =
+closeDrawer;
+
+
+/*
+   Buscar
+*/
+
+const input =
+document.querySelector("#searchInput");
+
+
+const results =
+document.querySelector("#searchResults");
+
+
+input.addEventListener(
+"input",
+()=>{
+
+
+const query =
+input.value
+.toLowerCase()
+.trim();
+
+
+if(!query){
+
+results.innerHTML = "";
+
+return;
+
+}
+
+
+/*
+   Filtrar
+*/
+
+const matches =
+products.filter(product=>{
+
+return (
+
+product[1]
+.toLowerCase()
+.includes(query)
+
+||
+
+product[2]
+.toLowerCase()
+.includes(query)
+
+);
+
+});
+
+
+if(matches.length === 0){
+
+results.innerHTML = `
+
+<p class="note">
+
+No encontramos ese perfume en la colección.
+
 </p>
 
 `;
 
-drawer.hidden=false;
+return;
 
-panel.querySelector('.close').onclick=close;
+}
+
+
+/*
+   Mostrar resultados
+*/
+
+results.innerHTML =
+matches
+.map(product=>`
+
+<div
+style="
+padding:15px 0;
+border-bottom:1px solid var(--line);
+">
+
+<strong
+style="
+font:500 22px 'Playfair Display';
+">
+
+${product[1]}
+
+</strong>
+
+
+<p
+style="
+font-size:11px;
+color:#79595b;
+">
+
+${product[2]}
+
+</p>
+
+</div>
+
+`)
+.join("");
+
+});
 
 };
 
 
-drawer.onclick=e=>{
+/* =====================================================
+   FORMULARIO EMAIL
+===================================================== */
 
-if(e.target===drawer)close();
+document
+.querySelector(".email")
+.onsubmit = e=>{
 
-};
-
-
-document.querySelector('.email').onsubmit=e=>{
 
 e.preventDefault();
 
-e.currentTarget.querySelector('button').textContent='¡Gracias!';
+
+e.currentTarget
+.querySelector("button")
+.textContent =
+"¡Gracias!";
 
 };
 
